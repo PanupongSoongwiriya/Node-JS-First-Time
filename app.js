@@ -1,7 +1,5 @@
 const express = require('express');
 const path = require('path');
-const productRouter = express.Router();
-const products = require('./data/products.json');
 
 //Other setting for show detail when call web
 const debug = require('debug')('app');
@@ -9,6 +7,7 @@ const morgan = require('morgan');
 
 const app = express();
 const PORT = process.env.PORT;
+const productsRouter = require("./src/router/productsRouter");
 
 app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname, "/public/")));
@@ -20,15 +19,7 @@ app.get("/", (req, res) => {
     res.render("index", { username: 'Boy', customers: ['1', '2', '3'] });
 });
 
-productRouter.route("/").get((req, res) => {
-    res.render("Products", 
-        products,
-    );
-});
-productRouter.route("/1").get((req, res) => {
-    res.send("My Products1");
-});
-app.use("/products", productRouter);
+app.use("/products", productsRouter);
 
 app.listen(PORT, () => {
     debug("Listening on PORT %d", PORT);

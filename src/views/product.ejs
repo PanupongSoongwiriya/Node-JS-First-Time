@@ -50,54 +50,12 @@
   			<!--- Start of Menu-->
 			<div class="row" id="Menu">
 				<div class="col navMenu">
-	     		 	<h2 class="text-center" >~ Menu ~</h2>
+	     		 	<h2 class="text-center" >~ Product Detail ~</h2>
 				</div>
 			</div>
-			<div class="row bg-light">
-				<div class="col-md-4" >
-					<div class="card view zoom">
-  						<img class="card-img-top img-fluid " src="images/meat-menu.jpg">
-					  	<div class="card-body">
-					  		<h5 class="card-title">Products</h5>
-					    	<ul class="list-group list-group-flush">
-								<% products.map((product)=>{%>
-									<li class="list-group-item"><a href="/products/<%=product.id%>"><%=product.title%> price <%=product.price%></a></li>
-								<% })%>
-							</ul>
-					  	</div>
-					</div>
-				</div>
-				<div class="col-md-4" >
-					<div class="card">
-  						<img class="card-img-top img-fluid " src="images/fish-menu.jpg">
-					  	<div class="card-body">
-					  		<h5 class="card-title">~ Fish Menu ~</h5>
-					    	<ul class="list-group list-group-flush">
-							    <li class="list-group-item">Carpaccio di polpo</li>
-							    <li class="list-group-item">Cozze al verde</li>
-							 	<li class="list-group-item">Cocktail di gamberi</li>
-							 	<li class="list-group-item">Risotto alla crema di scampi</li>
-							 	<li class="list-group-item">Ravioli di pesce con crema di scampi</li>
-							</ul>
-					  	</div>
-					</div>
-				</div>
-				<div class="col-md-4" >
-					<div class="card">
-  						<img class="card-img-top img-fluid" src="images/menu-vegetarian.jpg">
-					  	<div class="card-body">
-					  		<h5 class="card-title">~ Vegetarian Menu ~</h5>
-					    	<ul class="list-group list-group-flush">
-							    <li class="list-group-item">Parmigiana di melanzane</li>
-							    <li class="list-group-item">Strudel con ricotta e spinaci</li>
-							 	<li class="list-group-item">Polpette di spinaci e ricotta</li>
-							 	<li class="list-group-item">Frittata di patate al forno</li>
-							 	<li class="list-group-item">Spaghetti con le polpettine vegetariane</li>
-							</ul>
-					  	</div>
-					</div>
-				</div>
-			</div>
+            <br>
+            <h1><%=product.title%></h1>
+            <p><%=product.price%></p>
 			<!--- End of Menu -->
 		</div>
 		<footer class="container">
