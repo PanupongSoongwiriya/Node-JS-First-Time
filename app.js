@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const productRouter = express.Router();
+const products = require('./data/products.json');
 
 //Other setting for show detail when call web
 const debug = require('debug')('app');
@@ -20,14 +21,9 @@ app.get("/", (req, res) => {
 });
 
 productRouter.route("/").get((req, res) => {
-    res.render("Products", {
-        products:[
-            {title:'P1', price:45},
-            {title:'P2', price:90},
-            {title:'P3', price:30},
-            {title:'P4', price:65},
-        ]
-    });
+    res.render("Products", 
+        products,
+    );
 });
 productRouter.route("/1").get((req, res) => {
     res.send("My Products1");

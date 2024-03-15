@@ -1,0 +1,20 @@
+{
+    "products": [
+        {
+            "title": "P1",
+            "price": 45
+        },
+        {
+            "title": "P2",
+            "price": 90
+        },
+        {
+            "title": "P3",
+            "price": 30
+        },
+        {
+            "title": "P4",
+            "price": 65
+        }
+    ]
+}
