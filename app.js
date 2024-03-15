@@ -20,7 +20,14 @@ app.get("/", (req, res) => {
 });
 
 productRouter.route("/").get((req, res) => {
-    res.send("My Products");
+    res.render("Products", {
+        products:[
+            {title:'P1', price:45},
+            {title:'P2', price:90},
+            {title:'P3', price:30},
+            {title:'P4', price:65},
+        ]
+    });
 });
 productRouter.route("/1").get((req, res) => {
     res.send("My Products1");
